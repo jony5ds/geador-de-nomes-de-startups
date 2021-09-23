@@ -32,9 +32,11 @@ class _RandomWordsState extends State<RandomWords> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Startup Name Generator'),
+        title: const Text('Startup Name Generator',
+        style: TextStyle(color: Colors.black,)),
+        backgroundColor: Colors.white,
         actions: [
-          IconButton(onPressed: _pushSaved, icon: const Icon(Icons.list))
+          IconButton(onPressed: _pushSaved, icon: const Icon(Icons.list), color: Colors.black,)
         ],
       ),
       body: _buildSuggestions(),
@@ -97,6 +99,7 @@ class _RandomWordsState extends State<RandomWords> {
       return Scaffold(
         appBar: AppBar(
           title: const Text('Saved Suggestions'),
+          backgroundColor: Colors.white,
         ),
         body: ListView(children: divided),
       );
